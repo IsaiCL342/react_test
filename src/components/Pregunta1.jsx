@@ -5,11 +5,14 @@ import { useState } from 'react';
 function Counter() {
     let [count, setCount] = useState(0);
 
-    /*const increment = () => {
+    
+    /*CODIGO DESECHADO
+    const increment = () => {
         count++;
         console.log(count);
     };*/
 
+    //Codigo corregido
     const increment = () => {
     setCount(prevCount => prevCount + 1);
     console.log(count); // Este log se referirá al valor anterior por la naturaleza asincrónica del estado
