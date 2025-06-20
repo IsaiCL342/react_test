@@ -11,9 +11,18 @@ function InputTracker() {
         <input
         type="text"
         value={value}
+        /*CODIGO DESECHADO
         onChange={(e) => {
             value = e.target.value; 
+        }}*/
+        
+        //CODIGO CORREGIDO
+        onChange={(e) => {
+            setValue(e.target.value);
         }}
+
+        //EXPLICACION: Se reemplazó la asignación directa al estado por una llamada a setValue, lo que permite que React actualice correctamente el componente con cada cambio de entrada. Esta corrección asegura que el input sea controlado de forma coherente y visible para el usuario, evitando mutaciones ilegales que podrían romper la consistencia del estado.
+
         />
     );
 }
